@@ -109,3 +109,24 @@ button {
     font-size: 32px;
     font-weight: 400;
 }
+
+footer{
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 2px solid #e4e4e4;
+    color:#30363b;
+    text-align: center;
+    height: 5px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.linked:hover{
+    color: #e4e4e4;
+    opacity: 0.6;
+}
+
+.git:hover{
+    color: #e4e4e4;
+    opacity: 0.6;
+}
