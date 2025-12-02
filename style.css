@@ -1,148 +1,132 @@
-/* RESET */
+/* ===============================
+   RESET
+================================= */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-/* BODY */
-body {
-    background: linear-gradient(#1354A5 0%, #041832 33%, #01080E 100%);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     color: white;
 }
 
-/* FONDO CODE */
+/* ===============================
+   BODY
+================================= */
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Fondo con código */
 body::before {
     content: "";
-    position: fixed;
-    inset: 0;
     background-image: url("img/code.png");
     background-repeat: no-repeat;
     background-position: right;
-    opacity: 0.35;
-    z-index: -1;
-}
-
-/* WRAPPER */
-.game-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-/* CONTENEDOR */
-.container {
+    position: absolute;
     width: 100%;
-    max-width: 1200px;
-    padding: 20px;
-    background-image: url("img/Ruido.png");
-    background-size: cover;
+    height: 100%;
+    opacity: 0.4;
+    display: block;
+}
+
+/* ===============================
+   CONTENEDOR PRINCIPAL
+================================= */
+.container {
+    width: 1200px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-radius: 24px;
     border: 1px solid #1875E8;
-    box-shadow: 4px 4px 20px rgba(0,0,0,0.35);
+    box-shadow: 4px 4px 20px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: 100% 100%;
+    position: relative;
 }
 
+/* Contenido interno del contenedor */
 .container__contenido {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
+    position: absolute;
+    bottom: 0;
 }
 
-/* TEXTO */
+/* Bloque de texto + input + botones */
+.container__informaciones {
+    flex: 1;
+    padding: 3rem;
+}
+
+/* ===============================
+   TEXTO
+================================= */
+.container__texto {
+    margin: 16px 0;
+}
+
+.container__texto-azul {
+    color: #1875E8;
+}
+
 h1 {
     font-family: 'Chakra Petch', sans-serif;
     font-size: 72px;
-    margin-bottom: 16px;
+    padding-bottom: 3rem;
+}
+
+p,
+button {
+    font-family: 'Inter', sans-serif;
 }
 
 .texto__parrafo {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 400;
 }
 
-/* INPUT */
+/* ===============================
+   INPUT
+================================= */
 .container__input {
     width: 100%;
-    height: 70px;
+    height: 72px;
     border-radius: 16px;
-    background-color: white;
+    background-color: #FFF;
     border: none;
     color: #1875E8;
-    padding: 1rem 2rem;
-    font-size: 28px;
+    padding: 2rem;
+    font-size: 24px;
     font-weight: 700;
+    font-family: 'Inter', sans-serif;
 }
 
-/* BOTONES */
+/* ===============================
+   BOTONES
+================================= */
 .container__botones {
     display: flex;
-    gap: 20px;
-    margin-top: 20px;
+    gap: 2em;
 }
 
 .container__boton {
-    flex: 1;
+    width: 100%;
+    padding: 16px 24px;
+    margin-top: 2rem;
+    border: none;
     border-radius: 16px;
     background: #1875E8;
-    padding: 16px;
     font-size: 24px;
     font-weight: 700;
-    border: none;
 }
 
 .container__boton:disabled {
     background: #898989;
-}
-
-/* IMAGEN */
-.container__imagen-persona {
-    width: 45%;
-    max-width: 380px;
-    min-width: 300px;
-    margin: auto;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    color: white;
-    border-top: 1px solid #e4e4e47a;
-    margin-top: 40px;
-}
-
-footer a {
-    color: white;
-    font-weight: bold;
-}
-
-.social-footer {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.footer-icon {
-    font-size: 32px;
-    transition: .3s;
-}
-
-.footer-icon:hover {
-    opacity: .6;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    h1 { font-size: 42px; }
-    .texto__parrafo { font-size: 20px; }
-    .container__imagen-persona { width: 80%; }
 }
 
 
